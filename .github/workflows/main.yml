@@ -7,3 +7,9 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World!"
+      - name: step-2
+        run: |
+          echo "Welcome to the Github actions"
+          sleep 15
+          echo $date
+          echo "Good Byee,have a good sleep"
