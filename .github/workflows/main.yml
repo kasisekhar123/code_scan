@@ -11,5 +11,5 @@ jobs:
         run: |
           echo "Welcome to the Github actions"
           sleep 15
-          echo $date
+          echo "curent dat is $(date)"
           echo "Good Byee,have a good sleep"
