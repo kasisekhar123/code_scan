@@ -3,7 +3,7 @@ on: push
 jobs:
   my-job:
     runs-on:
-      - label-1
+      - labbel-1
     steps:
       - name: my-step
         run: echo "Hello World!"
