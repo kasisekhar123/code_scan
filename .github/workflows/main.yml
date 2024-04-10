@@ -19,24 +19,11 @@ jobs:
     runs-on:
       - labbel-1
     steps:
-      - name: before checing code
-        run: |
-          echo "currernt woking dir $(pwd)"
-          ls
-
       - name: checkout source code
         uses: actions/checkout@v2
-
-      - name: after checkout the code
-        run: |
-          echo "currernt woking dir $(pwd)"
-          ls
-        
-
       - name: checkout the Terrafrom version
-        uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: 1.4.1
+        uses: hashicorp/setup-terraform@v2.0.2
+
 
       - name: Terraform-init
         run: |
