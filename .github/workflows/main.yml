@@ -17,7 +17,7 @@ jobs:
    my-job2:
     name: Test-job-2
     runs-on:
-      - sekhar-test
+      - ubuntu-latest
     steps:
       - name: checkout the Terrafrom version
         uses: hashicorp/setup-terraform@v3
