@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v3
       - name: print sample message
         run: |
-          echo ${var1} $(date)"
+          echo "${var1} $(date)"
