@@ -15,3 +15,9 @@ jobs:
       - name: print sample message
         run: |
           echo "${var1} $(date)"
+  sample_second_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print sample message
+        run: |
+          echo "this is secons JOb"
