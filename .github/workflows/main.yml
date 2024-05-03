@@ -17,6 +17,7 @@ jobs:
         uses: hashicorp/setup-terraform@v1
       - name: check the Terrafrom version
         run: |
+          terraform --version
           echo "this is secons JOb"
           echo "$(var2) $(terrafrom --version)"
 
