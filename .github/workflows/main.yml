@@ -112,7 +112,10 @@ jobs:
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Version
-      run: terraform --version
+      run: |
+        terraform --version
+        echo $(pwd)
+        echo "this is curent terraorm version:......$(terraform --version)"
 
     # Generates an execution plan for Terraform
     # - name: Terraform Plan
