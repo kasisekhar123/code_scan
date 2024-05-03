@@ -27,7 +27,6 @@ jobs:
 
       - name: Terraform-init
         run: |
-          terraform init
           $(pwd)
           echo "this is the current terraform_version: $(terraform --version)"
 
