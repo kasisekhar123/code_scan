@@ -89,7 +89,7 @@ permissions:
 jobs:
   terraform:
     name: 'Terraform'
-    runs-on: sekhar-test
+    runs-on: sekhar-linux
     environment: production
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
