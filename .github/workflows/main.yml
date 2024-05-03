@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: checkout the Terrafrom version
         uses: hashicorp/setup-terraform@v2.0.2
+        with:
+          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
       - name: Terraform-init
         run: |
