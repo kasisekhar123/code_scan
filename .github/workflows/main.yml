@@ -4,7 +4,7 @@ jobs:
    my-job:
     name:  Test-job
     runs-on:
-      - labbel-1
+      - sekhar-test
     steps:
       - name: my-step
         run: echo "Hello World!"
@@ -27,5 +27,4 @@ jobs:
           terraform init
           $(pwd)
           echo "this is the current terraform_version: $(terraform --version)"
-
       
