@@ -36,6 +36,6 @@ jobs:
           elif [ ${{ github.ref }} == 'refs/heads/dev_branch' ];then
             echo "this is ...............${{ github.ref }}"
             echo "+++++++++++++++++++++++"
-            terraform plan
+            terraform destroy
           fi
               
