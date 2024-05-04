@@ -24,10 +24,10 @@ jobs:
       
       - name: check the AWS identity
         run: aws sts get-caller-identity       
-      # - name: Initialize Terrafrom
-      #   run: terraform init
-      # - name: Terrafrom formate resources
-      #   run: terraform fmt
-      # - name: terrafrom planned resources
-      #   run: terraform plan
+      - name: Initialize Terrafrom
+        run: terraform init
+      - name: Terrafrom formate resources
+        run: terraform fmt
+      - name: terrafrom planned resources
+        run: terraform plan
       
