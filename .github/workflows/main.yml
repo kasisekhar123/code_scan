@@ -28,6 +28,12 @@ jobs:
         run: terraform init
       - name: Terrafrom formate resources
         run: terraform fmt
-      - name: terrafrom planned resources
-        run: terraform plan
-      
+      - name:  terraform apply
+        run: |
+          if [ ${{ github.ref }} == 'refs/heads/main' ]; then
+            terraform plan
+            terraform apply --auto-approve
+          elif [ ${{ github.ref }} == 'refs/heads/dev_branch' ]; then
+             terrafrom plan
+          fi
+              
