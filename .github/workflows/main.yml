@@ -30,10 +30,12 @@ jobs:
         run: terraform fmt
       - name:  terraform plan and apply Stage
         run: |
-          if [ ${{ github.ref }} == 'refs/heads/main' ]; then
+          if [ ${{ github.ref }} == 'refs/heads/main' ];then
             terraform plan
             terraform apply --auto-approve
-          elif [ ${{ github.ref }} == 'refs/heads/dev_branch' ]; then
-             terrafrom plan
+          elif [ ${{ github.ref }} == 'refs/heads/dev_branch' ];then
+            echo "this is ...............${{ github.ref }}"
+            echo "+++++++++++++++++++++++"
+            terraform plan
           fi
               
