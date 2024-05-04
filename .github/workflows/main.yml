@@ -28,7 +28,7 @@ jobs:
         run: terraform init
       - name: Terrafrom formate resources
         run: terraform fmt
-      - name:  terraform apply
+      - name:  terraform plan and apply Stage
         run: |
           if [ ${{ github.ref }} == 'refs/heads/main' ]; then
             terraform plan
