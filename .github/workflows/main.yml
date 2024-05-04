@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Initialize Terrafrom
-        run: terraform ini
+        run: terraform init
       - name: Terrafrom formate resources
         run: terrafrom fmt
       
