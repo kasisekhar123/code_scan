@@ -18,12 +18,10 @@ jobs:
       - name: config aws creds
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: $acces_key
-          aws-secret-access-key: $secrect_key
+          aws-access-key-id: ${{secrets.AWS_KEY}}
+          aws-secret-access-key: ${{secrets.SECRET_KEY}} 
           aws-region: "us-east-1"
-        env:
-         acces_key: ${{secrets.AWS_KEY}}
-         secret_key:  ${{secrets.SECRET_KEY}} 
+      
       - name: check the AWS identity
         run: aws sts get-caller-identity       
       # - name: Initialize Terrafrom
