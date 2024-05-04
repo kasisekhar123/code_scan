@@ -8,16 +8,19 @@ env:
  var1: "TODAY_DATA_IS:"
  var2: "THE CURRUNT TERRAFORM VERSION IS...."
 jobs:
-  sample_first_job:
+  checkout_and_insatll:
     runs-on: ubuntu-latest
     steps:
       - name: chekout repository code
         uses: actions/checkout@v3
       - name: install terrafrom
         uses: hashicorp/setup-terraform@v1
-      - name: check the Terrafrom version
-        run: |
-          terraform --version
-          echo "this is secons JOb"
-          echo "$(var2) $(terrafrom --version)"
-
+  
+  infra_jos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Initialize Terrafrom
+        run: terraform ini
+      - name: Terrafrom formate resources
+        run: terrafrom fmt
+      
