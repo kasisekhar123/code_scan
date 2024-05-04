@@ -20,5 +20,5 @@ jobs:
       - name: Terrafrom formate resources
         run: terraform fmt
       - name: terrafrom planned resources
-        run: terrafrom plan
+        run: terraform plan
       
