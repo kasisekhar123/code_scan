@@ -18,5 +18,7 @@ jobs:
       - name: Initialize Terrafrom
         run: terraform init
       - name: Terrafrom formate resources
-        run: terrafrom fmt
+        run: terraform fmt
+      - name: terrafrom planned resources
+        run: terrafrom plan
       
