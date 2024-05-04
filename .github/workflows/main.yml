@@ -38,4 +38,6 @@ jobs:
             echo "+++++++++++++++++++++++"
             terraform plan
           fi
+      - name: Destroy resources
+        run: terraform destroy --auto-approve
               
