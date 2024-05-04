@@ -20,6 +20,7 @@ jobs:
         with:
           aws-access-key-id: $acces_key
           aws-secret-access-key: $secrect_key
+          aws-region: "us-east-1"
         env:
          acces_key: ${{secrets.AWS_KEY}}
          secret_key:  ${{secrets.SECRET_KEY}} 
